@@ -31,6 +31,7 @@ body{
 }
 /*Giving the nav container a font and making it into a flexbox display for row wrapping*/
 .nav-container{
+  font-family: sans-serif;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
