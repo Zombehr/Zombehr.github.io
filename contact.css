@@ -1,0 +1,109 @@
+/**
+ * @Author: Brendan Henry
+ * @Date:   2018-12-06T10:45:59-05:00
+ * @Last modified by:   Brendan Henry
+ * @Last modified time: 2018-12-06T14:31:07-05:00
+ */
+
+
+
+@charset "UTF-8";
+
+/*Setting up variables for the colors used in the website*/
+:root {
+  --main-bg-color: #F4F4F4;
+  --main-accent-color: #c0b283;
+  --main-active-color: #898989;
+  --main-hover-color: #DCD0C0;
+  --secondary-accent-color: #373737;
+  --secondary-hover-color: #cbc2a2;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*setting the background color and margins*/
+body{
+  background: var(--main-bg-color);
+  margin: 0;
+}
+/*Giving the nav container a font and making it into a flexbox display for row wrapping*/
+.nav-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  list-style-type: none;
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+}
+/*setting the color for the nav links for active and the hover*/
+.nav-container a:link, .nav-container a:active, .nav-container a:visited{
+  text-decoration: none;
+  color: var(--main-active-color);
+}
+
+.nav-container a:hover{
+  text-decoration: underline;
+  color: var(--main-hover-color);
+}
+/*Setting the alignment and font-size of the navigation links */
+.nav-container > li{
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  flex: 1;
+}
+
+/*This is the media query section for phone screens*/
+@media screen and (max-width: 768px) {
+
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-container > li {
+    flex-basis: 100%;
+  }
+
+}
+
+/*This is the styling for the jumbotron, making things centered and making the linear-gradient background*/
+.jumbotron{
+  text-align: center;
+  background-size: cover;
+  height:100vh;
+  width: 100vw;
+  display: block;
+  overflow: auto;
+  background: linear-gradient(to right, var(--secondary-accent-color), var(--main-hover-color), var(--main-bg-color), var(--main-hover-color), var(--secondary-accent-color));
+}
+.jumbotron h1{
+  color: white;
+  text-shadow: 0 0 3px black;
+}
+
+/*This is the footer, the position is fixed so you can always see it. There is also the back to top button*/
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+}
+
+footer p{
+  text-align: left;
+  color: white;
+}
+
+footer p > a{
+  text-decoration: none;
+  color: white;
+  float: right;
+}

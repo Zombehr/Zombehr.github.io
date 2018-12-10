@@ -1,0 +1,259 @@
+/**
+ * @Author: Brendan Henry
+ * @Date:   2018-12-06T10:46:00-05:00
+ * @Last modified by:   Brendan Henry
+ * @Last modified time: 2018-12-06T14:26:26-05:00
+ */
+
+
+
+@charset "UTF-8";
+
+/*Setting up variables for the colors used in the website*/
+:root {
+  --main-bg-color: #F4F4F4;
+  --main-accent-color: #c0b283;
+  --main-active-color: #898989;
+  --main-hover-color: #DCD0C0;
+  --secondary-accent-color: #373737;
+  --secondary-hover-color: #cbc2a2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*setting the background color and margins*/
+body{
+  background: var(--main-bg-color);
+  margin: 0;
+}
+/*Giving the nav container a font and making it into a flexbox display for row wrapping*/
+.nav-container{
+  font-family: sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  list-style-type: none;
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+}
+/*setting the color for the nav links for active and the hover*/
+.nav-container a:link, .nav-container a:active, .nav-container a:visited{
+  text-decoration: none;
+  color: var(--main-active-color);
+}
+
+.nav-container a:hover{
+  text-decoration: underline;
+  color: var(--main-hover-color);
+}
+/*Setting the alignment and font-size of the navigation links */
+.nav-container > li{
+  padding: 10px;
+  text-align: center;
+  font-size: 2em;
+  flex: 1;
+}
+
+/*This is the styling for the jumbotron, making things centered and making the linear-gradient background*/
+.jumbotron{
+  text-align: center;
+  background-size: cover;
+  display: block;
+  overflow: auto;
+  background: repeating-linear-gradient(to right, var(--secondary-accent-color), var(--main-hover-color), var(--main-bg-color), var(--main-hover-color), var(--secondary-accent-color));
+}
+.jumbotron h1{
+  color: black;
+  padding-top: 20px;
+  text-shadow: 0 0 3px white;
+}
+.jumbotron h2{
+  color: black;
+  text-shadow: 2px 2px white;
+}
+.jumbotron h1, h2{
+  font-family: sans-serif;
+}
+.jumbotron p{
+  margin-left: 25%;
+  margin-right: 25%;
+  color: black;
+  font-family: sans-serif;
+}
+/*This starts the responsive grid area, with the images and paragraphs underneath them, I've also assigned each of the items to a grid-area*/
+.item1{
+  grid-area: item1;
+  text-align: center;
+  background-color: var(--main-accent-color);
+}
+/*Setting the image in each item to be 100% as a max-width and setting a height so it maintains the area on the screen when minimizing/maximizing*/
+.item1 img{
+  max-width: 100%;
+  height: 300px;
+}
+.item2{
+  grid-area: item2;
+  text-align: center;
+  background-color: var(--main-accent-color);
+}
+.item2 img{
+  max-width: 100%;
+  height: 300px;
+}
+.item3{
+  grid-area: item3;
+  text-align: center;
+  background-color: var(--main-accent-color);
+}
+.item3 img{
+  max-width: 100%;
+  height: 300px;
+}
+/*The image container is where the responsive grid lives. I made the font sans-serif and set the background to match the body's background*/
+.image-container{
+  font-family: sans-serif;
+  background-color: var(--main-bg-color);
+  margin-top: 35px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 100px;
+  display: grid;
+  grid-gap: 10px;
+}
+/*the next three sections are for the table's i have. I want the bottom to have a margin so the footer doesn't
+get covered up by the footer*/
+table {
+  margin-bottom: 75px;
+}
+
+td {
+  text-align: center;
+  background-color: var(--main-active-color);
+  color: black;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/* This section is styling the button  */
+.collapsible, .download {
+ background-color: var(--main-active-color);
+ color: black;
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ text-align: center;
+ outline: none;
+ font-size: 15px;
+}
+
+/* this section adds a background color for when you hover over a link or a description
+and when you have a description open, the color will stay*/
+.active, .collapsible:hover, .download:hover {
+ background-color: var(--secondary-hover-color);
+}
+
+/* Styling the collapsible content. Note: hidden by default */
+.content {
+ padding: 0 18px;
+ display: none;
+ overflow: hidden;
+ background-color: var(--main-bg-color);
+ color: black;
+}
+
+.collapsible:after {
+    content: "\2193"; /* Unicode character for down arrow */
+    font-size: 13px;
+    color: black;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2191"; /* Unicode character for up arrow */
+}
+
+/*This is the media query section for phone and tablet screens as well as desktop*/
+@media screen and (max-width: 768px) {
+
+  .code-container-tablet-and-phone {
+    display: block;
+  }
+
+  .code-container-desktop {
+    display: none;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-container > li {
+    flex-basis: 100%;
+  }
+
+  .image-container{
+    grid-template-areas:
+    "item1"
+    "item2"
+    "item3";
+  }
+}
+
+/*This is the same as before, but for screens bigger than 768 pixels, not much changes between the two*/
+@media screen and (min-width: 768px){
+  .code-container-tablet-and-phone {
+    display: block;
+  }
+
+  .code-container-desktop {
+    display: none;
+  }
+
+  .image-container{
+    grid-template-areas:
+    "item1 item2 item3";
+    p{
+      word-wrap: normal;
+    }
+  }
+}
+
+/*And finally the desktop style where you can download the .jar and .java files*/
+@media screen and (min-width: 992px){
+  .code-container-tablet-and-phone {
+    display: none;
+  }
+
+  .code-container-desktop {
+    display: block;
+  }
+}
+/*This is the footer, the position is fixed so you can always see it. There is also the back to top button*/
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+}
+
+footer p{
+  text-align: left;
+  color: white;
+}
+
+footer p > a{
+  text-decoration: none;
+  color: white;
+  float: right;
+}

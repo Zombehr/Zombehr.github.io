@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!--
+    Author: Brendan Henry
+    Date:   10/22/2018
+
+    Filename: index.html
+    -->
+
+    <!--Setting up our meta Data for this page, the name and author, keywords etc. and our anchor to return to the top of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brendan's website homepage">
+    <meta name="author" content="Brendan Henry">
+    <title>My Coding Journey</title>
+    <meta name = "keywords" content = "coding, learning, pyhton, java, CIS, CS, programs, journey, carroll community college, raw files">
+    <link href="index.css" rel="stylesheet">
+    <a name="top" />
+  </head>
+
+  <body>
+    <!-- this is the navigation bar that's on top of each page. -->
+    <nav>
+      <ul class="nav-container">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- this is the jumbotron that shows on each page with the main content, this one is giving a little insight into the purpose of this website. -->
+     <section class="jumbotron">
+      <h1>Hi, my name is Brendan,</h1>
+      <h2>This is my story.</h2>
+      <p>I am making this website not only for a lab in my cis-137 class, but also as
+        a portfolio/blog of my progress through computer science. This will eventually
+        include my personaly projects, possible links to github, and just useful tips
+        I learn throughout my education.</p>
+      </section>
+      <!-- this the container for the run-down of my journey through CIS with pictures to assist in understanding. -->
+      <section class="image-container">
+        <div class="item1">
+          <img src="programming.png">
+          <p>I started learning about programming in 2017. I wanted to be able to make a game
+            much like runescape and league of legends. I never thought that I would take interest
+            in much else besides games when it came to programming.</p>
+          </div>
+        <div class="item2">
+          <img src="java.png">
+          <p>My very first course in programming was intro to java. I really liked
+            the idea of learning java because Runescape was coded entirely in java.
+            Once I started to get the hang of the basics, I took on a lot of personal projects.</p>
+          </div>
+        <div class="item3">
+          <img src="python.jpg">
+          <p>After learning java basics, I am now enrolled in an intro to python course.
+            I was fairly skeptical at first about taking to Python, and was more there
+            just because it was a requirement. However, after learning some of the real-world uses
+            I have become more open to the possibilities I can accomplish using Python.</p>
+        </div>
+      </section>
+
+      <!-- these next two sections are a table of my programs with descriptions, the first one
+      is for smaller screens and you cannot download from them, only get the name and description -->
+      <section class="code-container-tablet-and-phone">
+        <table style="Width:100%">
+          <tr>
+            <th colspan="3">This is a table of some of my programs (all in java) that I've created. Unfortunately I didn't bother adding comments throughout because
+               they're fairly simple programs. Please open on a desktop to Download the code.</th>
+          </tr>
+          <tr>
+            <th>Name of the Program</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Collatz</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This program executes Collatz Conjecture, that any positive integer n will always reach 1 using the sequence: if the number is
+                  even, divide by 2, if the number is odd, multiply by 3 and add 1. This program will also tell the user how many steps it took to reach 1.</p>
+                </div>
+              </td>
+          </tr>
+          <tr>
+            <td>Final Exam Calculator</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This is a very basic final exam grade calculator that is used to find what grade you need to earn on a final to achieve a specified percentage in the class.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Improved Final Exam Calculator</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This calculator does more than its predessesor. You first specify (yes or no) if you need a specific grade, and from there will input your current percent and the weight of the final.
+                The calculator will show you what you need for a specific grade, or what percentages you need for an A, B, C, etc.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>The Number Game</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This game is one of the first I've created in java and in python. The basis is that the computer "thinks" of a random number between 1 and 100, and you the user have to guess its value
+                  with only knowing if you were higher or lower than the generated number. There is also a highscore system in place.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Moment</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>The next three programs were designed by me when I was still in Mechanical Engineering. This particular one is for finding the Moment of a system.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Resultant Force</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This program will calculate the resultant force between a specified number of forces as well as give the coordinate direction angles of the force.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Cross Product</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This final program will calculate the cross product between two vectors.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Note Cards</td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>I made this program to simulate note cards, unfortunately I could not figure out how to get part of it to work. I wanted
+                to make it to where you could quiz yourself and the order of the keywords or definitions would be randomized, but other
+                projects got in the way and I never finished. The reading aspect works however, and you can edit the text files.</p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- this table is the same as before, with one more column, and you can download the .jar and .java files from
+      the two columns on either end, with the description in the middle. -->
+      <section class="code-container-desktop">
+        <table style="width:100%">
+          <tr>
+            <th colspan="3">This is a table of some of my programs (all in java) that I've created. Unfortunately I didn't bother adding comments throughout because they're fairly simple programs.</th>
+          </tr>
+          <tr>
+            <th>Name of the Program (and download)</th>
+            <th>Description</th>
+            <th>Raw Code(open in notepad or an IDE)</th>
+          </tr>
+          <tr>
+            <td><a href="Collatz.jar" download><button class="download">Collatz</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This program executes Collatz Conjecture, that any positive integer n will always reach 1 using the sequence: if the number is
+                  even, divide by 2, if the number is odd, multiply by 3 and add 1. This program will also tell the user how many steps it took to reach 1.</p>
+                </div>
+              </td>
+            <td><a href="Collatz.java" download><button class="download">Collatz.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="FinalExamCalc.jar" download><button class="download">Final Exam Calculator</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This is a very basic final exam grade calculator that is used to find what grade you need to earn on a final to achieve a specified percentage in the class.</p>
+              </div>
+            </td>
+            <td><a href="FinalExamCalc.java" download><button class="download">FinalExamCalculator.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="ImprovedFinalExamCalc.jar" download><button class="download">Improved Final Exam Calculator</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This calculator does more than its predessesor. You first specify (yes or no) if you need a specific grade, and from there will input your current percent and the weight of the final.
+                The calculator will show you what you need for a specific grade, or what percentages you need for an A, B, C, etc.</p>
+              </div>
+            </td>
+            <td><a href="ImprovedFinalExamCalc.java" download><button class="download">ImprovedFinalExamCalculator.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="NumberGame.jar" download><button class="download">The Number Game</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This game is one of the first I've created in java and in python. The basis is that the computer "thinks" of a random number between 1 and 100, and you the user have to guess its value
+                  with only knowing if you were higher or lower than the generated number. There is also a highscore system in place.</p>
+              </div>
+            </td>
+            <td><a href="NumberGame.java" download><button class="download">NumberGame.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="Moment.jar" download><button class="download">Moment</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>The next three programs were designed by me when I was still in Mechanical Engineering. This particular one is for finding the Moment of a system.</p>
+              </div>
+            </td>
+            <td><a href="Moment.java" download><button class="download">Moment.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="ResultantForce.jar" download><button class="download">Resultant Force</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This program will calculate the resultant force between a specified number of forces as well as give the coordinate direction angles of the force.</p>
+              </div>
+            </td>
+            <td><a href="ResultantForce.java" download><button class="download">ResultantForce.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="CrossProduct.jar" download><button class="download">Cross Product</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>This final program will calculate the cross product between two vectors.</p>
+              </div>
+            </td>
+            <td><a href="CrossProduct.java" download><button class="download">CrossProduct.java</button></td>
+          </tr>
+          <tr>
+            <td><a href="NoteCard.jar" download><button class="download">Note Cards</button></td>
+            <td><button class="collapsible">Description</button>
+              <div class="content">
+                <p>I made this program to simulate note cards, unfortunately I could not figure out how to get part of it to work. I wanted
+                to make it to where you could quiz yourself and the order of the keywords or definitions would be randomized, but other
+                projects got in the way and I never finished. The reading aspect works however, and you can edit the text files.</p>
+              </div>
+            </td>
+            <td><a href="Notecards.java" download><button class="download">NoteCards.java</button></td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- this litle bit of java script was based on information from a website that instructed me how to make
+      a collapsible button to help organize the table and descriptions -->
+      <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+    </main>
+    <!-- this is the footer with my name to claim the work, and my back to top anchor to bring the user back to the top of the webpage. -->
+    <footer>
+      <p>Website produced by: Brendan Henry
+        <a href="#top">Back to Top</a>
+      </p>
+    </footer>
+  </body>
+</html>
